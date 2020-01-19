@@ -15,6 +15,17 @@ class CreateProviderTable extends Migration
     {
         Schema::create('provider', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('city_id');
+            $table->string('name');
+            $table->integer('cpfoucnpj');
+            $table->integer('inscr');
+            $table->string('address');
+            $table->integer('number');
+            $table->string('neighborhood');
+            $table->integer('cep');
+            $table->string('contact');
+            $table->integer('phone');
+            $table->integer('phone_mobile');
             $table->timestamps();
         });
     }
